@@ -7,6 +7,14 @@ const animateWord = function (now, unit) {
   }
 };
 
+let imageIndex = 0; // 最初はmiku_0.pngからスタート
+
+setInterval(function() {
+  imageIndex = 1 - imageIndex; // 0と1を交互に切り替える
+  document.getElementById("#miku-image").src = "miku_${imageIndex}.png"; // 画像のsrc属性を更新する
+  }, 5000); // 1000ms = 1秒ごとに実行
+
+
 const player = new Player({
   app: {
     token: "MSB7JpBroogXvUTv",
@@ -29,6 +37,8 @@ const pauseBtn = document.querySelector("#pause");
 const positionEl = document.querySelector("#position strong");
 const artistSpan = document.querySelector("#artist span");
 const songSpan = document.querySelector("#song span");
+
+
 
 function onAppReady(app) {
   if (!app.managed) {
@@ -80,10 +90,13 @@ function onThrottledTimeUpdate(position) {
   positionEl.textContent = String(Math.floor(position));
 }
 
+
 //オーバーレイを消す
 function onPlay() {
   document.querySelector("#overlay").style.display = "none";
 }
+
+
 
 // 再生が一時停止したら歌詞表示をリセット
 function onPause() {
