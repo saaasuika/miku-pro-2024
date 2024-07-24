@@ -26,7 +26,9 @@
     "textalive-app-api": "^0.3.0"
   },
   "devDependencies": {
+    "@parcel/transformer-image": "^2.12.0",
     "del-cli": "^4.0.1",
-    "parcel": "^2.0.0-beta.3.1"
+    "parcel": "^2.12.0",
+    "process": "^0.11.10"
   }
 }
