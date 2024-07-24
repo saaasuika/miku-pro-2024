@@ -1,0 +1,34 @@
+{
+  "name": "miku-reality",
+  "private": true,
+  "version": "1.0.0",
+  "description": "ミクが歌うよ",
+  "scripts": {
+    "dev": "parcel src/index.html --dist-dir dev",
+    "build": "parcel build src/index.html --public-url ./ --dist-dir docs --no-source-maps",
+    "clean": "del-cli .parcel-cache dev docs",
+    "prebuild": "del-cli docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/saaasuika/miku-pro-2024.git"
+  },
+  "keywords": [
+    "textalive"
+  ],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/saaasuika/miku-pro-2024/issues"
+  },
+  "homepage": "https://github.com/saaasuika/miku-pro-2024",
+  "dependencies": {
+    "textalive-app-api": "^0.3.0"
+  },
+  "devDependencies": {
+    "@parcel/transformer-image": "^2.12.0",
+    "del-cli": "^4.0.1",
+    "parcel": "^2.12.0",
+    "process": "^0.11.10"
+  }
+}
