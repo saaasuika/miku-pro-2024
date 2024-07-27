@@ -23,7 +23,7 @@
   },
   "homepage": "https://github.com/saaasuika/miku-pro-2024",
   "dependencies": {
-    "textalive-app-api": "^0.3.0"
+    "textalive-app-api": "^0.4.0"
   },
   "devDependencies": {
     "@parcel/transformer-image": "^2.12.0",
